@@ -1,0 +1,24 @@
+﻿  projectEx1CaveMain.cpp
+E:\GithubPulls\VRSENG545\Assign3\projectEx1\projectEx1CaveMain.cpp(170,16): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+E:\GithubPulls\VRSENG545\Assign3\projectEx1\projectEx1CaveMain.cpp(236,29): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+E:\GithubPulls\VRSENG545\Assign3\projectEx1\projectEx1CaveMain.cpp(248,29): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+E:\GithubPulls\VRSENG545\Assign3\projectEx1\projectEx1CaveMain.cpp(260,29): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+E:\GithubPulls\VRSENG545\Assign3\projectEx1\projectEx1CaveMain.cpp(278,30): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+E:\GithubPulls\VRSENG545\Assign3\projectEx1\projectEx1CaveMain.cpp(284,31): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\GithubPulls\VRSENG545\Assign3\projectEx1\projectEx1CaveMain.cpp(284,23): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\GithubPulls\VRSENG545\Assign3\projectEx1\projectEx1CaveMain.cpp(285,31): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\GithubPulls\VRSENG545\Assign3\projectEx1\projectEx1CaveMain.cpp(285,17): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\GithubPulls\VRSENG545\Assign3\projectEx1\projectEx1CaveMain.cpp(286,32): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\GithubPulls\VRSENG545\Assign3\projectEx1\projectEx1CaveMain.cpp(286,17): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\GithubPulls\VRSENG545\Assign3\projectEx1\projectEx1CaveMain.cpp(287,32): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\GithubPulls\VRSENG545\Assign3\projectEx1\projectEx1CaveMain.cpp(287,23): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\GithubPulls\VRSENG545\Assign3\projectEx1\projectEx1CaveMain.cpp(346,29): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+E:\GithubPulls\VRSENG545\Assign3\projectEx1\projectEx1CaveMain.cpp(358,29): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+E:\GithubPulls\VRSENG545\Assign3\projectEx1\projectEx1CaveMain.cpp(370,29): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+E:\GithubPulls\VRSENG545\Assign3\projectEx1\projectEx1CaveMain.cpp(393,13): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+E:\GithubPulls\VRSENG545\Assign3\projectEx1\projectEx1CaveMain.cpp(396,28): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+E:\GithubPulls\VRSENG545\Assign3\projectEx1\projectEx1CaveMain.cpp(409,13): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+E:\GithubPulls\VRSENG545\Assign3\projectEx1\projectEx1CaveMain.cpp(427,13): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+E:\GithubPulls\VRSENG545\Assign3\projectEx1\projectEx1CaveMain.cpp(430,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+E:\GithubPulls\VRSENG545\Assign3\projectEx1\projectEx1CaveMain.cpp(444,13): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+  KNAVETest.vcxproj -> E:\GithubPulls\VRSENG545\Assign3\projectEx1\x64\Release\projectEx1.exe
