@@ -1,0 +1,26 @@
+﻿  caveMain.cpp
+C:\Users\chace.nielson1\Desktop\Assign1\caveMain.cpp(170,16): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\chace.nielson1\Desktop\Assign1\caveMain.cpp(236,29): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\chace.nielson1\Desktop\Assign1\caveMain.cpp(248,29): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\chace.nielson1\Desktop\Assign1\caveMain.cpp(260,29): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\chace.nielson1\Desktop\Assign1\caveMain.cpp(278,30): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\chace.nielson1\Desktop\Assign1\caveMain.cpp(284,31): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\chace.nielson1\Desktop\Assign1\caveMain.cpp(284,23): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\chace.nielson1\Desktop\Assign1\caveMain.cpp(285,31): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\chace.nielson1\Desktop\Assign1\caveMain.cpp(285,17): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\chace.nielson1\Desktop\Assign1\caveMain.cpp(286,32): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\chace.nielson1\Desktop\Assign1\caveMain.cpp(286,17): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\chace.nielson1\Desktop\Assign1\caveMain.cpp(287,32): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\chace.nielson1\Desktop\Assign1\caveMain.cpp(287,23): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\chace.nielson1\Desktop\Assign1\caveMain.cpp(346,29): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\chace.nielson1\Desktop\Assign1\caveMain.cpp(358,29): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\chace.nielson1\Desktop\Assign1\caveMain.cpp(370,29): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\chace.nielson1\Desktop\Assign1\caveMain.cpp(393,13): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\chace.nielson1\Desktop\Assign1\caveMain.cpp(396,28): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\chace.nielson1\Desktop\Assign1\caveMain.cpp(409,13): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\chace.nielson1\Desktop\Assign1\caveMain.cpp(412,29): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\chace.nielson1\Desktop\Assign1\caveMain.cpp(425,13): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\chace.nielson1\Desktop\Assign1\caveMain.cpp(428,29): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\chace.nielson1\Desktop\Assign1\caveMain.cpp(441,13): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\chace.nielson1\Desktop\Assign1\caveMain.cpp(444,29): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+  KNAVETest.vcxproj -> C:\Users\chace.nielson1\Desktop\Assign1\x64\Release\testKnave.exe
