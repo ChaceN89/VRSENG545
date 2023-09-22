@@ -1,0 +1,4 @@
+﻿LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+cave_ogl.lib(cave_ogl.obj) : warning LNK4099: PDB 'KNAVELib.pdb' was not found with 'cave_ogl.lib(cave_ogl.obj)' or at 'C:\545+602-LabCode\Downloads\StereoTest_MVS2017\x64\Release\KNAVELib.pdb'; linking object as if no debug info
+cave_ogl.lib(vectorMath.obj) : warning LNK4099: PDB 'KNAVELib.pdb' was not found with 'cave_ogl.lib(vectorMath.obj)' or at 'C:\545+602-LabCode\Downloads\StereoTest_MVS2017\x64\Release\KNAVELib.pdb'; linking object as if no debug info
+  KNAVETest.vcxproj -> C:\545+602-LabCode\Downloads\StereoTest_MVS2017\x64\Release\StereoTest.exe

@@ -1,0 +1,8 @@
+﻿  cave_ogl.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\minwindef.h(127,1): warning C4005: 'CALLBACK': macro redefinition
+C:\OpenHaptics\Developer\3.5.0\utilities\include\GL\glut.h(34): message : see previous definition of 'CALLBACK'
+  vectorMath.cpp
+  Generating Code...
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1545,5): warning MSB8012: TargetPath(C:\545+602-LabCode\Downloads_MVS2019\KNAVELib_MVS2019\x64\Release\KNAVELib.lib) does not match the Library's OutputFile property value (C:\545+602-LabCode\Downloads_MVS2019\KNAVELib_MVS2019\Lib\cave_ogl.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1547,5): warning MSB8012: TargetName(KNAVELib) does not match the Library's OutputFile property value (cave_ogl). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+  KNAVELib.vcxproj -> C:\545+602-LabCode\Downloads_MVS2019\KNAVELib_MVS2019\x64\Release\KNAVELib.lib

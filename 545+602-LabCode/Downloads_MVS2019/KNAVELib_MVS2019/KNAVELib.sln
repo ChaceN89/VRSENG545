@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KNAVELib", "KNAVELib.vcxproj", "{61C0006E-D05E-6C0C-6119-363A1F78D12F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+		Template|Win32 = Template|Win32
+		Template|x64 = Template|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61C0006E-D05E-6C0C-6119-363A1F78D12F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{61C0006E-D05E-6C0C-6119-363A1F78D12F}.Debug|Win32.Build.0 = Debug|Win32
+		{61C0006E-D05E-6C0C-6119-363A1F78D12F}.Debug|x64.ActiveCfg = Debug|x64
+		{61C0006E-D05E-6C0C-6119-363A1F78D12F}.Debug|x64.Build.0 = Debug|x64
+		{61C0006E-D05E-6C0C-6119-363A1F78D12F}.Release|Win32.ActiveCfg = Release|Win32
+		{61C0006E-D05E-6C0C-6119-363A1F78D12F}.Release|Win32.Build.0 = Release|Win32
+		{61C0006E-D05E-6C0C-6119-363A1F78D12F}.Release|x64.ActiveCfg = Release|x64
+		{61C0006E-D05E-6C0C-6119-363A1F78D12F}.Release|x64.Build.0 = Release|x64
+		{61C0006E-D05E-6C0C-6119-363A1F78D12F}.Template|Win32.ActiveCfg = Template|Win32
+		{61C0006E-D05E-6C0C-6119-363A1F78D12F}.Template|Win32.Build.0 = Template|Win32
+		{61C0006E-D05E-6C0C-6119-363A1F78D12F}.Template|x64.ActiveCfg = Template|x64
+		{61C0006E-D05E-6C0C-6119-363A1F78D12F}.Template|x64.Build.0 = Template|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB666982-E9BA-4E36-AE11-39A4CB2853DA}
+	EndGlobalSection
+EndGlobal
