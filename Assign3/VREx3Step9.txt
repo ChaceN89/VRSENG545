@@ -1,0 +1,77 @@
+Keyboard Observations
+bool mouseLeftDown;
+bool mouseRightDown;
+float mouseX, mouseY;
+
+
+
+Stereoscopic View
+bool stereoMethod;
+float nNear=1.;
+float nFar=15.;
+float frustumTop = nNear*tan(foview*3.14159/360); 
+float frustumRight = frustumTop*ratio; //top 
+float left;
+float right;
+float top;
+float bottom;
+float nearP=1;
+float farP=40;
+int stereo=1; // if stereo=0 rendering mono view
+
+
+Rendering Materials
+int drawMode = 0;
+int colorIndex=3; // 3 colors - red, green, blue
+float cameraAngleX = 45.0;
+float cameraAngleY = -145.0;
+
+
+Functions
+Interfaceing with keyboard
+void keyboardCB(unsigned char key, int x, int y);
+void mouseCB(int button, int stat, int x, int y);
+void mouseMotionCB(int x, int y);
+
+display sterio 
+void displayCB();
+void reshapeCB(int w, int h);
+void drawMono();
+void drawInStereo();
+
+
+rendering the materials
+void displayCB();
+void drawScene();
+void drawMono();
+void drawObject();
+void color();
+void drawInStereo();
+
+
+
+
+Settings
+Ascpect Ratio
+float ratio=1.777; // screen ratio = width / height = 16:9 = 1.7777   width/hight = 1.333 = 4:3
+
+initial colours
+int colorIndex=3; // 3 colors - red, green, blue
+
+iniital position
+float cameraAngleX = 45.0;
+float cameraAngleY = -145.0;
+
+focal length
+float nNear=1.;
+float nFar=15.;
+
+Distance between eyes
+float frustumTop = nNear*tan(foview*3.14159/360); 
+float frustumRight = frustumTop*ratio; //top 
+
+Initial Stereoscopic
+int stereo=1; // if stereo=0 rendering mono view 
+
+Total number of Modes
+GLuint listId = 0; // id of display list
