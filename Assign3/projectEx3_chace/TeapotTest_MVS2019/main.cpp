@@ -160,6 +160,7 @@ int colorIndex=3; // 3 colors - red, green, blue
 bool touched; // haptic code
 int stereo=1; // if stereo=0 rendering mono view 
 
+int material = 0;
 // haptic callback
 #ifdef HAPTIC
 void HLCALLBACK touchShapeCallback(HLenum event, HLuint object, HLenum thread, 
@@ -247,10 +248,12 @@ int initGLUT(int argc, char **argv)
     // it is called before any other GLUT routine
     glutInit(&argc, argv);
 	
+
 	if (stereo==1)
 		glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH | GLUT_STENCIL | GLUT_STEREO);   // display stereo mode
 	else
 		glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH | GLUT_STENCIL);   // display mono mode
+
 
     glutInitWindowSize(400, 300);               // window size
 
@@ -470,6 +473,9 @@ void showInfo()
     ss << "Press SPACE key to toggle stereo mode." << ends;
     drawString(ss.str().c_str(), 1, 1, color, font);
 
+
+    
+
     // unset floating format
     ss << std::resetiosflags(std::ios_base::fixed | std::ios_base::floatfield);
 
@@ -616,36 +622,47 @@ void idleCB()
 
 void keyboardCB(unsigned char key, int x, int y)
 {
-    float diffuseColourOther[3] = { 0.11f, 0.2222f, 0.178823f }; // color red - eliminate shading
+    float diffuse[3] = { 0.11f, 0.2222f, 0.178823f }; // different color - eliminate shading
+    float specular[3] = { 0.44f, 0.322f, 0.222f }; // different color - eliminate shading
+    float val = 1.7777;
     switch(key)
     {
     case 27: // ESCAPE
         clearSharedMem();
         exit(0);
         break;
-
-    case 'd': // switch rendering modes (fill -> wire -> point)
-    case 'D':
-        drawMode = ++drawMode % 3;
-        if(drawMode == 0)        // fill mode
-        {
-            glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-            glEnable(GL_DEPTH_TEST);
-            glEnable(GL_CULL_FACE);
+    case 'a':
+    case 'A':
+        
+        if (ratio == val) {
+            ratio = 1.333;
         }
-        else if(drawMode == 1)  // wireframe mode
-        {
-            glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-            glDisable(GL_DEPTH_TEST);
-            glDisable(GL_CULL_FACE);
-        }
-        else                    // point mode
-        {
-            glPolygonMode(GL_FRONT_AND_BACK, GL_POINT);
-            glDisable(GL_DEPTH_TEST);
-            glDisable(GL_CULL_FACE);
+        else {
+            ratio = val;
         }
         break;
+    //case 'd': // switch rendering modes (fill -> wire -> point)
+    //case 'D':
+    //    drawMode = ++drawMode % 3;
+    //    if(drawMode == 0)        // fill mode
+    //    {
+    //        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+    //        glEnable(GL_DEPTH_TEST);
+    //        glEnable(GL_CULL_FACE);
+    //    }
+    //    else if(drawMode == 1)  // wireframe mode
+    //    {
+    //        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    //        glDisable(GL_DEPTH_TEST);
+    //        glDisable(GL_CULL_FACE);
+    //    }
+    //    else                    // point mode
+    //    {
+    //        glPolygonMode(GL_FRONT_AND_BACK, GL_POINT);
+    //        glDisable(GL_DEPTH_TEST);
+    //        glDisable(GL_CULL_FACE);
+    //    }
+    //    break;
 
     case ' ': // switch rendering modes (fill -> wire -> point)
         stereoMethod=!stereoMethod;
@@ -655,35 +672,42 @@ void keyboardCB(unsigned char key, int x, int y)
 		touched=!touched;
 		color();
 		break;
-    case 'a':
-    case 'A':
-        if (ratio == 1.7777) {
-            ratio = 1.333;
-        }else {
-            ratio = 1.7777;
-        }
-        break;
+
     case 'm':
-
-
-        if (diffuseColor == diffuseColorRed) {
-
-            for (int i = 0; i < colorIndex; i++) {
-                diffuseColor[i] = diffuseColorPurple[i];
-            }
-        }else if (diffuseColor == diffuseColorPurple){
+    case 'M':
+        
+        if (material == 0) {
 
             for (int i = 0; i < colorIndex; i++) {
-                diffuseColor[i] = diffuseColourOther[i];
+                diffuseColor[i] = diffuse[i];
             }
+            material = 1;
+        }else if (material == 1){
+
+            for (int i = 0; i < colorIndex; i++) {
+                diffuseColor[i] = specular[i];
+            }
+            material = 2;
         }
         else {
             for (int i = 0; i < colorIndex; i++) {
                 diffuseColor[i] = diffuseColorRed[i];
             }
+            material = 0;
         }
-         drawTeapot();
          break;
+    case 'd':
+    case 'D':
+        if (camera.eyeSep == camera.focalLength / 60) {
+            camera.eyeSep = 0.65;
+        }
+        else if (camera.eyeSep == 0.65) {
+            camera.eyeSep = 0.8;
+        }
+        else {
+            camera.eyeSep = camera.focalLength / 60;
+        }
+        break;
     default:
         ;
     }

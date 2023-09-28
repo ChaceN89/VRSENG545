@@ -1,1 +1,2 @@
 C:\Users\chace.nielson1\Desktop\VRSENG545\Assign3\projectEx3\TeapotTest_MVS2019\x64\Release\projectEx3.exe
+E:\GithubPulls\VRSENG545\Assign3\projectEx3_chace\TeapotTest_MVS2019\x64\Release\projectEx3.exe
