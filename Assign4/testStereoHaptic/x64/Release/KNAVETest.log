@@ -1,0 +1,53 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: The intermediate directory (x64\Release\) contains files shared from another project (HapticStereoTest.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  caveMain.cpp
+E:\GithubPulls\VRSENG545\Assign4\testStereoHaptic\caveMain.cpp(139,25): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+E:\GithubPulls\VRSENG545\Assign4\testStereoHaptic\caveMain.cpp(214,16): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+E:\GithubPulls\VRSENG545\Assign4\testStereoHaptic\caveMain.cpp(292,29): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+E:\GithubPulls\VRSENG545\Assign4\testStereoHaptic\caveMain.cpp(304,29): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+E:\GithubPulls\VRSENG545\Assign4\testStereoHaptic\caveMain.cpp(316,29): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+E:\GithubPulls\VRSENG545\Assign4\testStereoHaptic\caveMain.cpp(334,30): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+E:\GithubPulls\VRSENG545\Assign4\testStereoHaptic\caveMain.cpp(340,31): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\GithubPulls\VRSENG545\Assign4\testStereoHaptic\caveMain.cpp(340,23): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\GithubPulls\VRSENG545\Assign4\testStereoHaptic\caveMain.cpp(341,31): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\GithubPulls\VRSENG545\Assign4\testStereoHaptic\caveMain.cpp(341,17): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\GithubPulls\VRSENG545\Assign4\testStereoHaptic\caveMain.cpp(342,32): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\GithubPulls\VRSENG545\Assign4\testStereoHaptic\caveMain.cpp(342,17): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\GithubPulls\VRSENG545\Assign4\testStereoHaptic\caveMain.cpp(343,32): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\GithubPulls\VRSENG545\Assign4\testStereoHaptic\caveMain.cpp(343,23): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\GithubPulls\VRSENG545\Assign4\testStereoHaptic\caveMain.cpp(400,29): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+E:\GithubPulls\VRSENG545\Assign4\testStereoHaptic\caveMain.cpp(412,29): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+E:\GithubPulls\VRSENG545\Assign4\testStereoHaptic\caveMain.cpp(424,29): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+  FaceManager.cpp
+E:\GithubPulls\VRSENG545\Assign4\testStereoHaptic\FaceManager.cpp(188,48): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+E:\GithubPulls\VRSENG545\Assign4\testStereoHaptic\FaceManager.cpp(190,44): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+E:\GithubPulls\VRSENG545\Assign4\testStereoHaptic\FaceManager.cpp(191,45): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\OpenHaptics\utilities\include\HDU\hduVector.inl(203,33): warning C4244: 'argument': conversion from 'HDdouble' to 'T', possible loss of data
+          with
+          [
+              T=HDfloat
+          ]
+C:\OpenHaptics\utilities\include\HDU\hduVector.inl(260): message : see reference to function template instantiation 'hduVector3D<HDfloat> operator /<HDfloat>(const hduVector3D<HDfloat> &,HDdouble)' being compiled
+E:\GithubPulls\VRSENG545\Assign4\testStereoHaptic\FaceManager.cpp(120): message : see reference to function template instantiation 'hduVector3D<HDfloat> normalize<HDfloat>(const hduVector3D<HDfloat> &)' being compiled
+C:\OpenHaptics\utilities\include\HDU\hduVector.inl(202,33): warning C4244: 'argument': conversion from 'HDdouble' to 'T', possible loss of data
+          with
+          [
+              T=HDfloat
+          ]
+C:\OpenHaptics\utilities\include\HDU\hduVector.inl(201,33): warning C4244: 'argument': conversion from 'HDdouble' to 'T', possible loss of data
+          with
+          [
+              T=HDfloat
+          ]
+  HapticManager.cpp
+E:\GithubPulls\VRSENG545\Assign4\testStereoHaptic\HapticManager.cpp(348,3): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Generating Code...
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+cave_ogl.lib(cave_ogl.obj) : warning LNK4099: PDB 'KNAVELib.pdb' was not found with 'cave_ogl.lib(cave_ogl.obj)' or at 'E:\GithubPulls\VRSENG545\Assign4\testStereoHaptic\x64\Release\KNAVELib.pdb'; linking object as if no debug info
+cave_ogl.lib(vectorMath.obj) : warning LNK4099: PDB 'KNAVELib.pdb' was not found with 'cave_ogl.lib(vectorMath.obj)' or at 'E:\GithubPulls\VRSENG545\Assign4\testStereoHaptic\x64\Release\KNAVELib.pdb'; linking object as if no debug info
+hlu.lib(hlu.obj) : warning LNK4099: PDB 'HLU.pdb' was not found with 'hlu.lib(hlu.obj)' or at 'E:\GithubPulls\VRSENG545\Assign4\testStereoHaptic\x64\Release\HLU.pdb'; linking object as if no debug info
+hlu.lib(hluAfx.obj) : warning LNK4099: PDB 'HLU.pdb' was not found with 'hlu.lib(hluAfx.obj)' or at 'E:\GithubPulls\VRSENG545\Assign4\testStereoHaptic\x64\Release\HLU.pdb'; linking object as if no debug info
+hdu.lib(hduAfx.obj) : warning LNK4099: PDB 'HDU.pdb' was not found with 'hdu.lib(hduAfx.obj)' or at 'E:\GithubPulls\VRSENG545\Assign4\testStereoHaptic\x64\Release\HDU.pdb'; linking object as if no debug info
+hdu.lib(hduDecompose.obj) : warning LNK4099: PDB '' was not found with 'hdu.lib(hduDecompose.obj)' or at ''; linking object as if no debug info
+hdu.lib(hduMatrix.obj) : warning LNK4099: PDB 'HDU.pdb' was not found with 'hdu.lib(hduMatrix.obj)' or at 'E:\GithubPulls\VRSENG545\Assign4\testStereoHaptic\x64\Release\HDU.pdb'; linking object as if no debug info
+hdu.lib(hduQuaternion.obj) : warning LNK4099: PDB 'HDU.pdb' was not found with 'hdu.lib(hduQuaternion.obj)' or at 'E:\GithubPulls\VRSENG545\Assign4\testStereoHaptic\x64\Release\HDU.pdb'; linking object as if no debug info
+  KNAVETest.vcxproj -> E:\GithubPulls\VRSENG545\Assign4\testStereoHaptic\x64\Release\testStereoHaptic.exe

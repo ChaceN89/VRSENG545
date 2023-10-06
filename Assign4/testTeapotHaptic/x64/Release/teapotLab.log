@@ -1,0 +1,15 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: The intermediate directory (x64\Release\) contains files shared from another project (HapticTeapotTest.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  main.cpp
+  Timer.cxx
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 182 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+hlu.lib(hlu.obj) : warning LNK4099: PDB 'HLU.pdb' was not found with 'hlu.lib(hlu.obj)' or at 'E:\GithubPulls\VRSENG545\Assign4\testTeapotHaptic\x64\Release\HLU.pdb'; linking object as if no debug info
+hlu.lib(hluAfx.obj) : warning LNK4099: PDB 'HLU.pdb' was not found with 'hlu.lib(hluAfx.obj)' or at 'E:\GithubPulls\VRSENG545\Assign4\testTeapotHaptic\x64\Release\HLU.pdb'; linking object as if no debug info
+hdu.lib(hduAfx.obj) : warning LNK4099: PDB 'HDU.pdb' was not found with 'hdu.lib(hduAfx.obj)' or at 'E:\GithubPulls\VRSENG545\Assign4\testTeapotHaptic\x64\Release\HDU.pdb'; linking object as if no debug info
+hdu.lib(hduError.obj) : warning LNK4099: PDB 'HDU.pdb' was not found with 'hdu.lib(hduError.obj)' or at 'E:\GithubPulls\VRSENG545\Assign4\testTeapotHaptic\x64\Release\HDU.pdb'; linking object as if no debug info
+hdu.lib(hduDecompose.obj) : warning LNK4099: PDB 'HDU.pdb' was not found with 'hdu.lib(hduDecompose.obj)' or at 'E:\GithubPulls\VRSENG545\Assign4\testTeapotHaptic\x64\Release\HDU.pdb'; linking object as if no debug info
+hdu.lib(hduMatrix.obj) : warning LNK4099: PDB 'HDU.pdb' was not found with 'hdu.lib(hduMatrix.obj)' or at 'E:\GithubPulls\VRSENG545\Assign4\testTeapotHaptic\x64\Release\HDU.pdb'; linking object as if no debug info
+hdu.lib(hduQuaternion.obj) : warning LNK4099: PDB 'HDU.pdb' was not found with 'hdu.lib(hduQuaternion.obj)' or at 'E:\GithubPulls\VRSENG545\Assign4\testTeapotHaptic\x64\Release\HDU.pdb'; linking object as if no debug info
+  teapotLab.vcxproj -> E:\GithubPulls\VRSENG545\Assign4\testTeapotHaptic\x64\Release\testTeapotHaptic.exe
