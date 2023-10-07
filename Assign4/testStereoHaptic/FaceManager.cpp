@@ -13,6 +13,7 @@
 #include <assert.h>
 
 #include <vector>
+#include <GL/glut.h>
 
 using namespace std;
 
@@ -44,6 +45,7 @@ public:
     void setup();
     void cleanup();
     void drawFaces();
+	void drawSphere();
 	void drawFace(int i);
 	int getNumFaces();
 	void drawFaceOpenGL(int i);
@@ -178,6 +180,14 @@ void FaceManager::drawFaces()
     
 }
 
+void FaceManager::drawSphere() {
+	glPushMatrix();
+	glTranslatef(-1.5, 1.0, -2.0);
+	glColor3f(1.0, 0.0, 1.0);
+	glutSolidSphere(1.0, 20, 16);
+	glPopMatrix();
+	glFlush();
+}
 /*******************************************************************************
 	Draw one face
 *******************************************************************************/

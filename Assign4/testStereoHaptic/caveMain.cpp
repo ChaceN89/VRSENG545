@@ -177,6 +177,7 @@ void drawScene(){
 void drawOpenGL(){
 	drawCave();
 	gFaceManager->drawFaces();
+	gFaceManager->drawSphere();
 	gHapticManager->feelPoints();
 	gHapticManager->drawCursor();
 	gHapticManager->UpdateHapticMapping();

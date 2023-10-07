@@ -44,6 +44,8 @@ protected:
 
     static void HLCALLBACK hlTouchCB(HLenum event, HLuint object, HLenum thread,
                                      HLcache *cache, void *userdata);
+    static void HLCALLBACK hlNewTouchCB(HLenum event, HLuint object, HLenum thread,
+        HLcache* cache, void* userdata);
     static void HLCALLBACK hlButtonDownCB(HLenum event, HLuint object, HLenum thread,
                                           HLcache *cache, void *userdata);
     static void HLCALLBACK hlButtonUpCB(HLenum event, HLuint object, HLenum thread,
@@ -68,6 +70,10 @@ private:
     HLuint m_effectName;       
 	double gCursorScale;
 	HLuint gMyShapeId;
+    // Variable to hold the id of the sphere drawn in Item 2.
+    HLuint gMyShapeId2;
+    // End of the addition
+
 	vector<HLuint> myShapesId;
 
 
@@ -113,6 +119,7 @@ HapticManager::HapticManager() :
 	gCursorDisplayList(0),   //initialization updated on 2015-07-21
 	gCursorScale(0),         //initialization updated on 2015-07-21
 	gMyShapeId(0),           //initialization updated on 2015-07-21
+    gMyShapeId2(0),
 	myShapesId(0),           //initialization updated on 2015-07-21
 	m_hHD(HD_INVALID_HANDLE),
     m_hHLRC(NULL)
@@ -171,6 +178,18 @@ void HapticManager::setup(IFaceManager *pFaceManager)
 
     hlAddEventCallback(HL_EVENT_1BUTTONUP, HL_OBJECT_ANY,
         HL_CLIENT_THREAD, hlButtonUpCB, this);
+
+    // Codes for setting up force feedback from the sphere drawn in Item 2.
+    gMyShapeId2 = hlGenShapes(7);
+    hlAddEventCallback(HL_EVENT_TOUCH, gMyShapeId2,
+        HL_CLIENT_THREAD, hlNewTouchCB, this);
+    hlAddEventCallback(HL_EVENT_UNTOUCH, gMyShapeId2,
+        HL_CLIENT_THREAD, hlNewTouchCB, this);
+    hlAddEventCallback(HL_EVENT_1BUTTONDOWN, HL_OBJECT_ANY,
+        HL_CLIENT_THREAD, hlButtonDownCB, this);
+    hlAddEventCallback(HL_EVENT_1BUTTONUP, HL_OBJECT_ANY,
+        HL_CLIENT_THREAD, hlButtonUpCB, this);
+    // End of the addition
 
     
 }
@@ -284,6 +303,12 @@ void HapticManager::feelPoints()
 		m_pFaceManager->drawFace(i);
         hlEndShape();
     //}
+        // Codes for getting force feedback from the sphere drawn in Item 2.
+    hlBeginShape(HL_SHAPE_FEEDBACK_BUFFER, gMyShapeId2);
+    hlTouchableFace(HL_FRONT_AND_BACK);
+    m_pFaceManager->drawSphere();
+    hlEndShape();
+    // End of the addition
 
     // Call any event callbacks that have been triggered.*/
     hlCheckEvents();
@@ -300,6 +325,18 @@ void HLCALLBACK HapticManager::hlTouchCB(HLenum event, HLuint object,
                                          void *userdata)
 {
 	 //Beep( 750, 300 );
+}
+
+void HLCALLBACK HapticManager::hlNewTouchCB(HLenum event, HLuint object,
+    HLenum thread, HLcache* cache,
+    void* userdata)
+{
+    glPushMatrix();
+    glTranslatef(-6, 1.0, -2.0);
+    glColor3f(0.5, 0.1, 0.6);
+    glutSolidSphere(1.0, 20, 16);
+    glPopMatrix();
+    glFlush();
 }
 
 

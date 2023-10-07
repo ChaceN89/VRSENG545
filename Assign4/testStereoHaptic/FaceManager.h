@@ -17,6 +17,7 @@ public:
     virtual void setup() = 0;
     virtual void cleanup() = 0;
 	virtual void drawFaces()=0;
+    virtual void drawSphere() = 0;
     virtual void drawFace(int i)=0;
 	virtual int getNumFaces()=0;
 
