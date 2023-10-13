@@ -180,7 +180,7 @@ void HapticManager::setup(IFaceManager *pFaceManager)
         HL_CLIENT_THREAD, hlButtonUpCB, this);
 
     // Codes for setting up force feedback from the sphere drawn in Item 2.
-    gMyShapeId2 = hlGenShapes(7);
+    gMyShapeId2 = hlGenShapes(1);
     hlAddEventCallback(HL_EVENT_TOUCH, gMyShapeId2,
         HL_CLIENT_THREAD, hlNewTouchCB, this);
     hlAddEventCallback(HL_EVENT_UNTOUCH, gMyShapeId2,

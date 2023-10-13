@@ -60,7 +60,7 @@ static HHLRC ghHLRC = 0;
 
 /* Shape id for shape we will render haptically. */
 HLuint gTeapotShapeId;
-
+HLuint gCircleShapeId;
 #define CURSOR_SCALE_SIZE 60
 static double gCursorScale;
 static GLuint gCursorDisplayList = 0;
@@ -109,6 +109,10 @@ void normalise(XYZ *p);
 XYZ crossProduct(XYZ p1, XYZ p2);
 void color();
 
+
+void drawCircle();
+void touchCircle();
+
 // haptic code begin
 #ifdef HAPTIC
 void exitHandler(void);
@@ -123,6 +127,7 @@ void updateWorkspace();
 // global variables
 void *font = GLUT_BITMAP_8_BY_13;
 GLuint listId = 0; // id of display list
+GLuint listid2 = 1;
 bool mouseLeftDown;
 bool mouseRightDown;
 float mouseX, mouseY;
@@ -157,6 +162,7 @@ float farP=40;
 
 int colorIndex=3; // 3 colors - red, green, blue
 bool touched; // haptic code
+bool touchedCirc;
 int stereo=1; // if stereo=0 rendering mono view 
 
 // haptic callback
@@ -167,6 +173,12 @@ void HLCALLBACK touchShapeCallback(HLenum event, HLuint object, HLenum thread,
 	touched=!touched;
 	color();
 }
+void HLCALLBACK touchShapeCircleCallback(HLenum event, HLuint object, HLenum thread,
+    HLcache* cache, void* userdata)
+{
+    touchedCirc = !touchedCirc;
+    touchCircle();
+}
 #endif
 
 void color(){
@@ -176,6 +188,12 @@ void color(){
 		for (int i=0; i<colorIndex; i++){
 			diffuseColor[i]=diffuseColorPurple[i];
 		}
+        for (int i = 0; i < sizeof(teapotVertices) / sizeof(teapotVertices[0]); i++) {
+            teapotVertices[i] = teapotVertices[i] + 1;
+        }
+        for (int i = 0; i < sizeof(teapotNormals) / sizeof(teapotNormals[0]); i++) {
+            teapotNormals[i] = teapotNormals[i] + 1;
+        }
 	}
 	else{
 		// red
@@ -184,7 +202,30 @@ void color(){
 		}
 	}
 }
+void touchCircle() {
+
+    if (!touchedCirc) {
+        glPushMatrix();
+        glTranslatef(6, 1.0, -2.0);
+        glColor3f(0.5, 0.1, 0.6);
+        glutSolidSphere(1.0, 20, 16);
+        glPopMatrix();
+        glFlush();
+    }
+}
 ///////////////////////////////////////////////////////////////////////////////
+
+void drawCircle() {
+    glPushMatrix();
+    glTranslatef(-6, 1.0, -2.0);
+    glColor3f(0.5, 0.1, 0.6);
+    glutSolidSphere(1.0, 20, 16);
+    glPopMatrix();
+    glFlush();
+}
+
+
+
 int main(int argc, char **argv)
 {
     // initialize global variables
@@ -227,7 +268,6 @@ int main(int argc, char **argv)
     // compile a display list of teapot mesh
     // see detail in createTeapotDL()
     listId = createTeapotDL();
-
     // the last GLUT call (LOOP)
     // window will be shown and display callback is triggered by events
     // NOTE: this call never return main().
@@ -560,6 +600,7 @@ void drawObject(){
 
 		timer.start();  //=====================================
 
+        drawCircle();
 		drawTeapot();           // render with vertex array, glDrawElements()
 	glPopMatrix();
     timer.stop();   //=====================================
@@ -735,10 +776,14 @@ void initHL()
 
     // Generate id's for the teapot shape.
     gTeapotShapeId = hlGenShapes(1);
+    gCircleShapeId = hlGenShapes(1);
+
 
 	 // Setup event callbacks.
-    hlAddEventCallback(HL_EVENT_TOUCH, HL_OBJECT_ANY, HL_CLIENT_THREAD, 
+    hlAddEventCallback(HL_EVENT_TOUCH, gTeapotShapeId, HL_CLIENT_THREAD, 
                        &touchShapeCallback, NULL);
+    hlAddEventCallback(HL_EVENT_TOUCH, gCircleShapeId, HL_CLIENT_THREAD,
+        &touchShapeCircleCallback, NULL);
 
 
     hlTouchableFace(HL_FRONT); // define force feedback from front faces of teapot
@@ -752,7 +797,7 @@ void exitHandler()
 {
     // Deallocate the sphere shape id we reserved in initHL.
     hlDeleteShapes(gTeapotShapeId, 1);
-
+    hlDeleteShapes(gCircleShapeId, 1);
     // Free up the haptic rendering context.
     hlMakeCurrent(NULL);
     if (ghHLRC != NULL)
@@ -830,19 +875,29 @@ void drawSceneHaptics()
     //    glCallList(listId);     // render with display list
     //else
         drawTeapot();           // render with vertex array, glDrawElements()
-
+        
     glPopMatrix();
 
 
     // End the shape.
     hlEndShape();
 
+    hlBeginShape(HL_SHAPE_FEEDBACK_BUFFER, gCircleShapeId);
+    glPushMatrix();
+    glTranslatef(0, 0, cameraDistance);
+    glRotatef(cameraAngleX, 1, 0, 0);   // pitch
+    glRotatef(cameraAngleY, 0, 1, 0);   // heading
+    drawCircle();
+    glPopMatrix();
+    hlEndShape();
+
+
     // End the haptic frame.
     hlEndFrame();
 
 	// Call any event callbacks that have been triggered.
     hlCheckEvents();
-
+    
 
 }
 /*******************************************************************************
